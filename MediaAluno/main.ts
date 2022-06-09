@@ -20,7 +20,7 @@ while (option !== 9) {
             control.media();
             break;
     
-            
+             
         default:
             break;
     }

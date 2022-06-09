@@ -28,9 +28,9 @@ export class notas {
 
     media(): void {
        if (this.notaatual >= 60) 
-        console.log('O aluno está aprovado!');
+        console.log('O aluno foi aprovado!');
             else 
-            console.log('O aluno está reprovado!');
+            console.log('O aluno foi reprovado!');
         
     }
 
