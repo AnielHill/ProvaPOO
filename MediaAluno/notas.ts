@@ -1,43 +1,65 @@
+ 
 export class notas {
     constructor(
-        private _notaatual: number,
-        private _notabimestre: number,
-
+        private _nota1: number,
+        private _nota2: number,
+        private _sn: number
     ) { }
 
-    public get notaatual(): number {
-        return this._notaatual;
+    public get nota1(): number {
+        return this._nota1;
     }
 
-    public set notaatual(_notaatual: number) {
-        this._notaatual = this.notaatual;
+    public set nota1(nota1: number) {
+        this._nota1 = nota1;
     }
 
-    public get notabimestre(): number {
-        return this._notabimestre;
+    public get nota2(): number {
+        return this._nota2;
     }
 
-    public set notabimestre(_notabimestre: number) {
-        this._notabimestre = this.notabimestre;
+    public set nota2(nota2: number) {
+        this._nota2 = nota2;
     }
 
-    bimestre(valor: number): void {
-        this.notabimestre = valor;
-      
+    public get sn(): number {
+        return this._sn;
     }
 
-    media(): void {
-       if (this.notaatual >= 60) 
-        console.log('O aluno foi aprovado!');
-            else 
-            console.log('O aluno foi reprovado!');
+    public set sn(sn: number) {
+        this._sn = sn;
+    }
+        
+
+    atribuir(n1: number, n2: number): void {
+        this.nota1 = n1;
+        this.nota2 = n2;
         
     }
 
-    printbimestre(): string {
-        return (
-            "Nota do aluno: \n" +
-            ("\nVelocidade Permitida:" + this.notabimestre.toFixed(3))
-        );
-    }
+    Cmedia(): void {
+        this.sn = (this.nota1 + this.nota2) / 2;
+        console.log('');
+        console.log ('a nota do aluno foi: ' + this.sn);
+        if (this.sn <= 59.9) {
+
+            console.log('Media para passar: 60 ');
+            console.log('');
+            console.log('o aluno foi: Reprovado');
+            
+            
+
+        } else {
+
+            console.log('Media para passar: 60 ');
+            console.log('');
+            console.log('o aluno foi: Aprovado ');
+            
+            
+
+        }
+ 
+ }
+
+
 }
